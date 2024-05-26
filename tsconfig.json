@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "es5",   // Set the target ECMAScript version (e.g., es2015, esnext)
+    "module": "commonjs", // Use the CommonJS module system
+    "outDir": "dist",    // Output compiled JavaScript to the "dist" folder
+    "strict": true,      // Enable strict type checking
+    "esModuleInterop": true // Allow for mixing CommonJS and ES modules
+  },
+  "include": ["src"] // Include the "src" folder for compilation
+}
