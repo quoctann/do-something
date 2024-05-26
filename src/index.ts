@@ -1,12 +1,16 @@
-import express from "express"; // Import Express with type information
+import express, { Request, Response } from "express";
 
-const app: express.Application = express(); // Create an Express application
-const port: number = 3000; // Define the port number
+const app = express();
+const port = process.env.PORT || 8080;
 
-app.get("/", (req: express.Request, res: express.Response) => {
-	res.send("Hello World!");
+app.get("/", (_req: Request, res: Response) => {
+	return res.send("Express Typescript on Vercel");
+});
+
+app.get("/ping", (_req: Request, res: Response) => {
+	return res.send("pong 🏓");
 });
 
 app.listen(port, () => {
-	console.log(`Server is listening on port ${port}`);
+	return console.log(`Server is listening on ${port}`);
 });
